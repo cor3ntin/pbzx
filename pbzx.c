@@ -30,7 +30,7 @@
 
 #define XBSZ 4 * 1024
 #define ZBSZ 1024 * XBSZ
-#define VERSION "1.0.2"
+#define VERSION "1.0.3"
 
 /* Structure to hold the command-line options. */
 struct options {
@@ -51,9 +51,10 @@ static void usage(char const* error) {
     fprintf(stderr,
         "\n"
         "pbzx v" VERSION " stream parser\n"
-        "https://github.com/NiklasRosenstein/pbzx\n"
+        "https://github.com/cor3ntin/pbzx\n"
         "\n"
         "Licensed under GNU GPL v3.\n"
+		"Copyright (C) 2018  Corentin Jabot\n"
         "Copyright (C) 2017  NiklasRosenstein\n"
         "Copyright (C) 2015  PHPdev32\n"
         "\n"

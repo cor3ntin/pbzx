@@ -1,28 +1,20 @@
 # pbzx stream parser
 
 This repository is a fork of PHPdev32's implementation of the `pbzx` stream
-parser program of which the original source code can be found [here][source].
+parser program of which the original source code can be found [http://www.tonymacx86.com/general-help/135458-pbzx-stream-parser.html].
 Pbzx is a format employed in later versions of OSX disk images (starting with
-10.10) to encode payload data in `.pkg` files. Pbzx unpacks `.pkg` files and
-outputs to stdout to be unpacked with `cpio`. Note that `.pkg` files are plain
-`.xar` archives.
+10.10).
 
-    pbzx SomePkg.pkg | cpio -i  # or
-    pbzx -n Payload  | cpio -i
+## Compilatation
 
-To compile `pbzx`, do
-
-    clang -llzma -lxar -I /usr/local/include pbzx.c -o pbzx
-
-> If `<lzma.h>` or `<xar/xar.h>` are missing, install them with [Homebrew]
-> using
->
->     brew install xz && brew link xz
-
-  [source]: http://www.tonymacx86.com/general-help/135458-pbzx-stream-parser.html
-  [Homebrew]: http://brew.sh/
+Run `make`
+You will need to have `liblzma, libxml2, libssl, libbz2, libzar` installed
 
 ## Changelog
+
+__v1.0.3__
+
+- Add a simple Makefile
 
 __v1.0.2__
 
@@ -40,10 +32,11 @@ __v1.0.1__
 
 __v1.0.0__
 
-- Initial version with exact code from [source].
+- Initial version with exact code from [http://www.tonymacx86.com/general-help/135458-pbzx-stream-parser.html].
 
 ## License
 
+Copyright (C) 2018  Corentin Jabot
 Copyright (C) 2017  Niklas Rosenstein
 Copyright (C) 2014  PHPdev32
 
